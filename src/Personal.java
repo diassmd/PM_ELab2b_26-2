@@ -26,8 +26,17 @@ public class Personal extends Profissional {
      */
     public double addAulaAvulsa(double quantidade) {
         // TODO: se quantidade <= 0, não altera e devolve aulasAvulsas atual
+        for (int i=0; i<MAX_AULAS_AVULSAS; i++){
+        if (quantidade<=0){
+            return aulasAvulsas;
+        }
         // TODO: soma quantidade, sem ultrapassar MAX_AULAS_AVULSAS; devolve o novo total
-        return 0.0;
+        if (quantidade<=MAX_AULAS_AVULSAS){
+            i+=quantidade;
+        }
+    }
+        return quantidade;
+    
     }
 
     /**
@@ -38,6 +47,7 @@ public class Personal extends Profissional {
     @Override
     public double registrarPagamento() {
         // TODO: calcular total, armazenar em ultimoPagamento, zerar aulasAvulsas e devolver o total
+
         return 0.0;
     }
 
